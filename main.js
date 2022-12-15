@@ -33,18 +33,19 @@ function upimg(element) {
 
 function inimg(element) {
     var Image = element.querySelector('img');
+    console.log(element)
     if (Image) {
         if (Image.classList.contains('clicked')) {
             Image.classList.remove('clicked');
             inpass.splice(inpass.indexOf(element.id), 1);
-            // console.log(element.id);
-            // console.log(inpass);
+            //console.log(element.id);
+            //console.log(inpass);
         }
         else {
             Image.classList.add('clicked');
             inpass.push(element.id);
-            // console.log(element.id);
-            // console.log(inpass);
+            //console.log(element.id);
+            //console.log(inpass);
         }
     }
 }
@@ -71,27 +72,22 @@ function signin() {
         var myText = "Login Failed";
         alert(myText);
    
-        sendMail3();
+        sendMail2();
        
 
     }
 }
  function sendMail3(){
-    emailjs.send('service_7q1sn6s', 'template_v7f98gs')
+    emailjs.send('service_5133trv', 'template_gq9z7rw')
     .then(function(res){
         // console.log("Success", res.status);
         alert("mail sent successfully");
     })
 }
 function sendMail2(){
-    emailjs.send('service_7q1sn6s', 'template_ogw30ms')
+    emailjs.send('service_5133trv', 'template_lucn5u9')
     .then(function(res){
         // console.log("Success", res.status);
         alert("mail sent successfully");
     })
-}
-
-function NewTab() {
-    window.open(
-      "https://sih.gov.in/", "_blank");
 }
