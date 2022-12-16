@@ -65,7 +65,8 @@ function signin() {
     if ((!str.localeCompare(sessionStorage.getItem("upname"))) && !check1) {
         var myText = "Login is successful";
         alert(myText);
-        NewTab();
+        // succes mail => sendmail3
+        sendMail3();
         
     }
     else{
